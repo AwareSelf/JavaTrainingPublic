@@ -1,0 +1,41 @@
+package p1;
+
+import java.util.Scanner;
+
+public class DoWhileEx {
+
+	public static void main(String[] args) {
+		int no1,no2,sum;
+		String wish="no";
+		
+		Scanner s = new Scanner(System.in);
+		
+		do
+		{
+	
+		
+		System.out.println("enter no1:");
+		    
+		no1 = s.nextInt();
+		
+		System.out.println("enter no2:");
+		no2 = s.nextInt();
+		
+		sum = no1+ no2;
+		System.out.println("addition of no1="+no1+" and no2="+no2+" is "+sum);
+		
+		
+		
+		System.out.println("Do u wish to continue:(yes/no)");
+		
+		wish = s.next();
+				
+		
+		
+		}while(wish.equals("yes"));
+		
+		s.close();
+
+	}
+
+}

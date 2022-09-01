@@ -1,0 +1,19 @@
+package p1;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("Hello Everyone!");
+		
+		int no1=10,no2=20,sum;
+		
+		sum = no1+no2;
+		
+		System.out.println(sum);
+		
+
+	}
+
+}
