@@ -1,0 +1,18 @@
+package classesobjects;
+
+public class Employee {
+	
+	private int empid;
+	
+	
+	Employee()
+	{
+		this.empid = 5;
+	}
+
+	
+	void displayEmployee()
+	{
+		System.out.println(this.empid);
+	}
+}

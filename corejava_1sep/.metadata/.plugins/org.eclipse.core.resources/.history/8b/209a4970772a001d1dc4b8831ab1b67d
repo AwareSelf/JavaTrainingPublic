@@ -1,0 +1,26 @@
+package classesobjects;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Employee e = new Employee();
+		
+		e.displayEmployee();
+		double s = e.calcAnnSalary();
+		
+		System.out.println(s);
+		
+		Employee e1 = new Employee(10,2000);
+		
+		e1.displayEmployee();
+		
+         s = e.calcAnnSalary();
+		
+		System.out.println(s);
+
+
+	}
+
+}

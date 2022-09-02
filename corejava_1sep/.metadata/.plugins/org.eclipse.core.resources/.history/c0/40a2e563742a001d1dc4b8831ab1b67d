@@ -1,0 +1,19 @@
+package classesobjects;
+
+public class Employee {
+	
+	private int empid;
+	
+	
+	Employee()
+	{
+		System.out.println("Employee constructor called");
+		this.empid = 5;
+	}
+
+	
+	void displayEmployee()
+	{
+		System.out.println(this.empid);
+	}
+}

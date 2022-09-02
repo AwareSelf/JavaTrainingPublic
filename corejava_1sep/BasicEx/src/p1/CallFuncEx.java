@@ -1,0 +1,39 @@
+package p1;
+
+public class CallFuncEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		CallFuncEx ob = new CallFuncEx();
+		
+		
+		//write logic to take 3 nos from user using Scanner
+		
+		//call instance method by first creating instance ob
+		// int no =  ob.findLargestSmallest(10,20,30);
+		
+		//call a static method in same class
+		 int no =  findLargestSmallest(10,20,30);
+		 
+		 System.out.println("largest no is:"+no);
+		
+	}
+	
+	static int findLargestSmallest(int no1,int no2,int no3)
+	{
+		//logic to find the largest nos
+		return no1;
+	}
+	
+	/*
+	int findLargestSmallest(int no1,int no2,int no3)
+	{
+		//logic to find the largest nos
+		
+		return no1;
+		
+	}
+	*/
+
+}

@@ -1,0 +1,36 @@
+package classesobjects;
+
+public class Employee {
+	
+	private int empid;
+	private double salary;
+	
+	
+	Employee()
+	{
+		System.out.println("no-arg Employee constructor called");
+		this.empid = 5;
+		this.salary =1000;
+	}
+	
+	
+	//overloaded constructor
+	Employee(int empid,double salary)
+	{
+		System.out.println("arg based Employee constructor called");
+		this.empid = empid;
+		this.salary = salary;
+	}
+	
+	
+	double calcAnnSalary()
+	{
+		return this.salary*12;
+	}
+
+	
+	void displayEmployee()
+	{
+		System.out.println(this.empid);
+	}
+}
