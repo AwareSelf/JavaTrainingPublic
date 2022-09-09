@@ -1,32 +1,24 @@
 package collectionsex;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
 	
 	private int empid;
 	private String name;
 	private double salary;
+	private int deptno;
 	
 	
 	
-	Employee()
-	{
-		System.out.println("no-arg Employee constructor called");
-		this.empid = 5;
-		this.salary =1000;
-		
-	}
+
 	
-	
-	//overloaded constructor
-	Employee(int empid,String name,double salary)
-	{
-		System.out.println("arg based Employee constructor called");
+	public Employee(int empid, String name, double salary, int deptno) {
+		super();
 		this.empid = empid;
-		this.salary = salary;
 		this.name = name;
+		this.salary = salary;
+		this.deptno = deptno;
 	}
-	
-	
+
 	double calcAnnSalary()
 	{
 		return this.salary*12;
@@ -38,12 +30,13 @@ public class Employee {
 	}
 
 	
-	public String toString()
-	{
-		//System.out.println(this.empid);
-		return  "empid="+this.empid+",name="+this.name+",salary="+this.salary; 
-	}
+	
 
+
+	@Override
+	public String toString() {
+		return "Employee [empid=" + empid + ", name=" + name + ", salary=" + salary + ", deptno=" + deptno + "]";
+	}
 
 	public int getEmpid() {
 		return empid;
@@ -64,12 +57,49 @@ public class Employee {
 		this.salary = salary;
 	}
 	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getDeptno() {
+		return deptno;
+	}
+
+	public void setDeptno(int deptno) {
+		this.deptno = deptno;
+	}
+
 	@Override
 	public boolean equals(Object o)
 	{
-		
+		System.out.println("equal method of Emp called...");
 		return this.empid == ((Employee)o).empid;
 	}
+	
+	
+	public int compareTo(Employee e)
+	{
+		System.out.println("compareTo of Employee called..");
+		
+		   return this.empid - e.empid;
+		
+		//  return  e.empid - this.empid;  //descending order
+
+	}
+   
+	@Override
+	public int hashCode()
+	{
+		System.out.println("hashCode method of Emp called...");
+		return this.deptno;
+	}
+	
 	
 	
 }

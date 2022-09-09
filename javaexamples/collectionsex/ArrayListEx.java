@@ -5,6 +5,20 @@ public class ArrayListEx {
 
 	public static void main(String[] args) {
 		
+		
+		
+		List<Integer> li = new ArrayList<Integer>();
+		
+		li.add(10);
+		
+		int no =30;
+		li.add(30);
+		
+		System.out.println(li);
+		
+		
+		
+		
 	//	List l = new ArrayList();
 		List<String> l = new ArrayList<String>();
 		
