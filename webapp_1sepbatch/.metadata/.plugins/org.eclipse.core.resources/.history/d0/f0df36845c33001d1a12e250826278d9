@@ -1,0 +1,12 @@
+Document Object Model
+
+The document object represents the whole html document.
+
+When html document is loaded in the browser, it becomes a document object. 
+It is the root element that represents the html document. It has properties and methods. 
+By the help of document object, we can add dynamic content to our web page.
+
+As mentioned earlier, it is the object of window. So window.document Is same as document  
+
+According to W3C - "The W3C Document Object Model (DOM) is a platform and language-neutral interface 
+that allows programs and scripts to dynamically access and update the content, structure, and style of a document."

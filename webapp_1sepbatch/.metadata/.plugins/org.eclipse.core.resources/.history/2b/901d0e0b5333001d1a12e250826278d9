@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hello World</title>
+
+<script type="text/javascript">
+
+//Declaring class  
+class Employee  
+  {  
+//Initializing an object  
+    constructor(id,name)  
+    {  
+      this.id=id;  
+      this.name=name;  
+    }  
+//Declaring method  
+    detail()  
+    {  
+  document.writeln(this.id+" "+this.name+"<br>")  
+    }  
+  }  
+ 
+ 
+ 
+</script>
+
+</head>
+<body>
+<h3>Hello User </h3>
+
+<script type="text/javascript">
+document.write(total);
+</script>
+</body>
+</html>

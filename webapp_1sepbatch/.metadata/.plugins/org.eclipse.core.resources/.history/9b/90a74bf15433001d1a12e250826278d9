@@ -1,0 +1,34 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script type="text/javascript">  
+   
+function fun() {  
+alert("Welcome to the HSBC Software development!");  
+}  
+
+  function mouseoverevent()  
+    {  
+        alert("This is JavaTpoint");  
+    }
+    
+ 
+    function focusevent()  
+    {  
+        document.getElementById("input1").style.background=" aqua";  
+    }  
+
+</script>  
+</head>  
+<body>  
+<h3> This is an example of using onclick attribute in HTML. </h3>  
+<p> Click the following button to see the effect. </p>  
+<button onclick = "fun()">Click me</button>  
+
+
+
+<p onmouseover="mouseoverevent()"> Keep cursor over me</p>  
+<input type="text" id="input1" onfocus="focusevent()"/>  
+  
+</body>  
+</html>  

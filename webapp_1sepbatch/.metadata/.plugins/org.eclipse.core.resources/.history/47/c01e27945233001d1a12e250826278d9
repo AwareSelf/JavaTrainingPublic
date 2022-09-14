@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hello World</title>
+
+<script type="text/javascript">
+
+ var sum1=10;
+ var sum2=20;
+ var total = sum1+sum2;
+ 
+</script>
+
+</head>
+<body>
+<h3>Hello User </h3>
+
+
+
+
+</body>
+</html>

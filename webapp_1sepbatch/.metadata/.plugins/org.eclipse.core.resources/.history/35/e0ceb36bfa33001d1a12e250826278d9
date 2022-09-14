@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>innerHtml & innerText</title>
+
+</head>
+<body>
+
+<div id="div1">
+   <p> Hi all of you </p>
+</div>
+
+<script type="text/javascript">
+  
+    var t1 = document.getElementById("div1").innerHTML;
+    var t2= document.getElementById("div1").innerText;
+    
+    console.log(t1);
+    console.log(t2);
+    
+    document.write("accessing innerHTML property of div"+t1);
+     document.write("accessing innerText property of div"+t2);
+</script>
+</body>
+</html>
