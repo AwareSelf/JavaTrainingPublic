@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>innerHtml & innerText</title>
+
+</head>
+<body>
+
+<div id="div1">
+   <p> Hi all of you </p>
+</div>
+
+<script type="text/javascript">
+  
+    var t1 = document.getElementById("div1").innerHTML;
+    
+    document.write(t1);
+</script>
+</body>
+</html>

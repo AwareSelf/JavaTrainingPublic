@@ -1,0 +1,10 @@
+${empdet}
+${can_get_variable}
+
+
+
+
+<script type="text/javascript">
+
+ alert("hi hello");
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hi Everyone!!</title>
+<script type="text/javascript">
+
+  function func(no1,no2)
+  {
+    //var no1 = 10;
+    //var no2 = 20;
+   
+    var sum = no1 +  no2;
+    // alert(sum);
+     
+     return sum;
+  }
+</script>
+  
+</head>
+<body>
+
+<h2>Hi everyone!!</h2>
+
+
+<script type="text/javascript">
+
+  var no1 = 10;
+  var no2 = 20;
+  var s = func(no1,no2);
+  alert("sum is "+s);
+  
+  document.write("<h4>addition of no1="+no1+" and no2="+no2+" is "+s+"</h4>");
+</script>
+</body>
+</html>

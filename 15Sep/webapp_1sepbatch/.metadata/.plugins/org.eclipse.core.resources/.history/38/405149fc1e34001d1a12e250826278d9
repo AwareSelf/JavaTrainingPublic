@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Hi Everyone!!</title>
+
+
+<script type="text/javascript">
+
+  function func()
+  {
+   
+    alert("Welcome to HSBC Software!");
+   
+  }
+  
+ 
+</script>
+
+<body>
+
+<div>
+<button>GreetAll</button>
+<button onclick="removeGreeting()">Stop Greeting!</button>
+
+</div>
+
+<script type="text/javascript">
+
+
+ 
+
+  
+</script>
+</body>
+</html>

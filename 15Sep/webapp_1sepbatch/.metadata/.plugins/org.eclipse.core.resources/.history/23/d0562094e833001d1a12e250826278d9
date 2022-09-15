@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hi Everyone!!</title>
+<script type="text/javascript">
+
+  func()
+  {
+     alert("hi");
+  }
+</script>
+  
+</head>
+<body>
+
+<h2>Hi everyone!!</h2>
+
+
+<script type="text/javascript">
+
+  var no1 = 10;
+   var no2 = 20;
+   
+   var sum = no1 +  no2;
+   alert(sum);
+   
+   func();
+</script>
+</body>
+</html>
