@@ -64,6 +64,11 @@ public class Manager extends Employee {
 		System.out.println(","+this.teamSize+","+this.mgrType+","+this.commission);
 	}
 	
+	public void delegate()
+	{
+		System.out.println("Manager "+ this.getEmpname()+" is delegating work to team of team size:"+ this.teamSize);
+	}
+	
 
 	
 

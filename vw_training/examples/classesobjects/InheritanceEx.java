@@ -14,6 +14,7 @@ public class InheritanceEx {
 		
 		 Manager m1 = new Manager(101,"Ronit Roy",45000,10,5,"Sales",12000);
 		 m1.display();
+		 m1.delegate();
 		 
 		 /*
 		 System.out.println(m1.getTeamSize());
@@ -25,7 +26,9 @@ public class InheritanceEx {
 		 
 	  // superclass ref = subclass object();
 		 Employee ob = new Manager(102,"Manish Shah",15000,20,5,"HR",10000);
-		// ob.display();
+		 ob.display();
+		((Manager)ob).delegate();
+		 
 		 meth(ob);
 		 
 		 
@@ -43,7 +46,16 @@ public class InheritanceEx {
 	public static void meth(Employee ob)
 	{
 		ob.display();
-		ob.calcAnnSal();
+		
+		if(ob instanceof Manager)
+		{	
+		   ((Manager)ob).delegate();
+		}
+		else
+		{
+			System.out.println("runtime type of ob i.e employee:"+ob.getEmpname()+", is not a Manager, so not calling delegate() on it");
+		}
+	    
 	}
 
 }
