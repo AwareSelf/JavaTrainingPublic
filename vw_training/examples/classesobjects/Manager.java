@@ -60,6 +60,7 @@ public class Manager extends Employee {
 	@Override
 	public void display()
 	{
+		
 	    super.display();
 		System.out.println(","+this.teamSize+","+this.mgrType+","+this.commission);
 	}
@@ -68,6 +69,25 @@ public class Manager extends Employee {
 	{
 		System.out.println("Manager "+ this.getEmpname()+" is delegating work to team of team size:"+ this.teamSize);
 	}
+	
+	@Override
+	public double calcAnnSal()
+	{
+		System.out.println("calculate annual salary of Manager called..");
+		return super.calcAnnSal() + this.commission;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Manager [teamSize=" + teamSize + ", mgrType=" + mgrType + ", commission=" + commission + ", toString()="
+				+ super.toString() + "]";
+	}
+
+
+
+   
+	
 	
 
 	

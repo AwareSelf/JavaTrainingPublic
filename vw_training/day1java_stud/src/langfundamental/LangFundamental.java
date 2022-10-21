@@ -80,3 +80,14 @@ public class LangFundamental {
 	}
 
 }
+
+class Employee
+{
+	int empid;
+	
+	Employee(int empid)
+	{
+		this.empid=empid;
+	}
+	
+}

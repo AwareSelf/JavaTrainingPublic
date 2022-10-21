@@ -4,18 +4,41 @@ public class InheritanceEx {
 
 	public static void main(String[] args) {
 		
+		
+		final int val;
+		
+		val=6; //after 1st initialization value is final
+		
+	//	val++;
+		
+	//	val=9;
+		
+		
+		
+		
+		
+		
 
 		 //create a Manager object and check sequence of constructor call
 		 /*
 		 Manager m = new Manager();
 		 
 		 m.display();
-		 */
+	
+		*/
+		
 		
 		 Manager m1 = new Manager(101,"Ronit Roy",45000,10,5,"Sales",12000);
-		 m1.display();
-		 m1.delegate();
+		 //m1.display();
+		 System.out.println(m1);
 		 
+		 System.out.println(m1.calcAnnSal());
+		 if(m1 instanceof Manager)
+			  ((Manager)m1).delegate();
+			 else
+				 System.out.println("object ob ="+m1.getEmpname()+" is not manager so not calling delegate() method");
+
+		
 		 /*
 		 System.out.println(m1.getTeamSize());
 		 System.out.println(m1.getMgrType());
@@ -25,20 +48,44 @@ public class InheritanceEx {
 		 //Employee e = new Employee();
 		 
 	  // superclass ref = subclass object();
+		
 		 Employee ob = new Manager(102,"Manish Shah",15000,20,5,"HR",10000);
 		 ob.display();
-		((Manager)ob).delegate();
+		 
+		 //this line should be executed only when ob's runtime type is Manager
+		 
+		 if(ob instanceof Manager)
+		  ((Manager)ob).delegate();
+		 else
+			 System.out.println("object ob ="+ob.getEmpname()+" is not manager so not calling delegate() method");
+
 		 
 		 meth(ob);
 		 
 		 
 		 ob = new Employee(103,"Jeet phatak",23000,20);
 		// ob.display();
+		 
+		 //this line should be executed only when ob's runtime type is Manager
+		 if(ob instanceof Manager)
+		  ((Manager)ob).delegate();
+		 else
+			 System.out.println("object ob ="+ob.getEmpname()+" is not manager so not calling delegate() method");
+
+		 
 		 meth(ob);
+		  
 		 
 		 
 		 meth(new Manager(100,"Preeti Ganguly",85000,20,15,"Development",12000));
 		 meth(new Employee(90,"Saurav Ganguly",75000,20));
+		 
+		
+		 int no=9;
+		 System.out.println(no);
+		 
+		 Employee ex = new Employee(103,"Jeet phatak",23000,20);
+		 System.out.println(ex); // System.out.println(ex.toString());
 		 
 	}
 	
@@ -46,15 +93,12 @@ public class InheritanceEx {
 	public static void meth(Employee ob)
 	{
 		ob.display();
-		
-		if(ob instanceof Manager)
-		{	
-		   ((Manager)ob).delegate();
-		}
-		else
-		{
-			System.out.println("runtime type of ob i.e employee:"+ob.getEmpname()+", is not a Manager, so not calling delegate() on it");
-		}
+		System.out.println(ob);
+	
+		 if(ob instanceof Manager)
+	      ((Manager)ob).delegate();
+		 else
+			 System.out.println("object ob ="+ob.getEmpname()+" is not manager so not calling delegate() method");
 	    
 	}
 

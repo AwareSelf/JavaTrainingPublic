@@ -2,8 +2,7 @@ package classesobjects;
 
 public class Employee {
 	
-	
-    private int empid;
+	private int empid;
 	private String empname;
 	private double salary;
 	private int deptno;
@@ -15,6 +14,9 @@ public class Employee {
 		
 		System.out.println("no-args/0-args Employee constructor called");
 		
+       double area =3.142* 2*2;
+		
+       
 		/*
 		this.empid=11;
 		this.deptno=10;
@@ -89,9 +91,16 @@ public class Employee {
 		
 	}
 	
+	@Override
+	public String toString()
+	{
+		return "details:"+this.empid+","+this.empname+","+this.salary+","+this.deptno;
+	}
+	
 	
 	public double calcAnnSal()
 	{
+		System.out.println("calculate annual salary of Employee called..");
 		return this.salary * 12;
 	}
 	
@@ -101,7 +110,10 @@ public class Employee {
 		return (this.salary * 12)+bonus;
 	}
 
-	
+	private void setEmpid(int empid)
+	{
+		this.empid=empid;
+	}
 	
 	
 
