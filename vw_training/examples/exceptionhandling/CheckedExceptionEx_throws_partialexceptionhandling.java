@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class CheckedExceptionEx {
+public class CheckedExceptionEx_throws_partialexceptionhandling {
 	
 	
 	public static void main(String[] args)
@@ -16,13 +16,26 @@ public class CheckedExceptionEx {
 		System.out.println("program execution strarted..");
 		
 		String fileName = "d://src//abstractexample//AbstractEx.java";
-		readFromFile(fileName);
 		
+		try
+		{
+		readFromFile(fileName);
+		}
+		catch(FileNotFoundException e)
+		{
+		 //e.printStackTrace();	
+			System.err.println("remaining handling of exception in main function:There is some issue while opening a file:AbstractEx.java");
+		}
+		catch(IOException e)
+		{
+			//e.printStackTrace();
+			System.err.println("remaining handling of exception in main function:File opened successfully but there's some issue while reading from a file:AbstractEx.java");
+		}
 		System.out.println("remaining program of main method executes..");
 	}
 	
-	
-	public static void readFromFile(String f)
+	//handle or declare
+	public static void readFromFile(String f) throws FileNotFoundException,IOException
 	{
        FileReader fr=null;
 		
@@ -30,28 +43,29 @@ public class CheckedExceptionEx {
 		{
 		   fr = new FileReader(f);
 		
+		  System.out.println("file opened successfully..starting to read from the file");
 		  System.out.println((char)fr.read());
 		
 		 
 		}
 		catch(FileNotFoundException e)
 		{
+			System.err.println("partially handling exception here:readFromFile function:"+e.getMessage());
 			
-		//	e.printStackTrace();
+			throw e; //rethrowing the same exception 
 			
-			System.err.println("There is some issue while opening a file:AbstractEx.java");
-			return;
+			//throw new IOException();
+			//throw new ArithmeticException();
+			
 		}
 		catch(IOException e)
 		{
-			//e.printStackTrace();
-			System.out.println("File opened successfully but there's some issue while reading from a file:AbstractEx.java");
-			return;
+			System.out.println(e.getMessage());
 		}
 		finally
 		{
 		
-		System.out.println("remaining program of the readFromFile function continues..");
+		System.out.println("inside finally..");
 		
 		
 		

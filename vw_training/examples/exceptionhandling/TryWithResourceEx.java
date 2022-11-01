@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class CheckedExceptionEx {
+public class TryWithResourceEx {
 	
 	
 	public static void main(String[] args)
@@ -24,11 +24,11 @@ public class CheckedExceptionEx {
 	
 	public static void readFromFile(String f)
 	{
-       FileReader fr=null;
+      
 		
-		try
+		try(FileReader fr = new FileReader(f); ) //only instance of classes tht implement AutoClosable interface could be passed here
 		{
-		   fr = new FileReader(f);
+		   
 		
 		  System.out.println((char)fr.read());
 		
@@ -48,31 +48,10 @@ public class CheckedExceptionEx {
 			System.out.println("File opened successfully but there's some issue while reading from a file:AbstractEx.java");
 			return;
 		}
-		finally
-		{
-		
-		System.out.println("remaining program of the readFromFile function continues..");
-		
-		
-		
-		try
-		{
-			
-		System.out.println("checking and attempting to close the file resource..");
-		if(fr!=null)	
-		  fr.close();
-		  
-		}
-		catch(IOException e)
-		{
-			//e.printStackTrace();
-			
-			System.out.println("problem while closing a file");
-			
-		}
-	  }  //end of finally
+	
+	  
 		
 	System.out.println("remaining program of the readFromFile function  after close file continues..");
-	}
+   } //end of function
 
-}
+}//end of class
