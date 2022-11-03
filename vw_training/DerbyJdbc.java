@@ -23,9 +23,9 @@ public class  DerbyJdbc
 		//if using java 5.0 or earlier	
 		//Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
 			
-	// con=DriverManager.getConnection("jdbc:derby:namadb;create=true;user=nama;password=nama");		
+	 con=DriverManager.getConnection("jdbc:derby:namadb;create=true;user=nama;password=nama");		
 		
-	 con=DriverManager.getConnection("jdbc:derby://localhost:1527/derbydb;create=true;user=nama;password=nama");		
+	// con=DriverManager.getConnection("jdbc:derby://localhost:1527/derbydb;create=true;user=nama;password=nama");		
 	
 	  System.out.println("The connection is successful.");
 		}
