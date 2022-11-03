@@ -13,19 +13,16 @@ public class  DerbyJdbc
 		try
 		{
 		
-//goto C:\Derby\db-derby-10.14.2.0-bin\bin & 
-//batch file run startNetworkServer
+
 
 			
-		//Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-		Class.forName("org.apache.derby.jdbc.ClientDriver");
+		Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+	
 		
-		//if using java 5.0 or earlier	
-		//Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-			
+				
 	 con=DriverManager.getConnection("jdbc:derby:namadb;create=true;user=nama;password=nama");		
 		
-	// con=DriverManager.getConnection("jdbc:derby://localhost:1527/derbydb;create=true;user=nama;password=nama");		
+		
 	
 	  System.out.println("The connection is successful.");
 		}
