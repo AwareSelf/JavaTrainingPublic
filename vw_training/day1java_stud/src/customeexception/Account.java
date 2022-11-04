@@ -1,4 +1,4 @@
-package multithreadingsynchro;
+package customeexception;
 
 public class Account {
 
@@ -45,17 +45,12 @@ public class Account {
 		this.balance = this.balance + amt;
 	}
 	
-	public double withdraw(double amt) throws InsufficientBalanceException,InterruptedException
+	public double withdraw(double amt) throws InsufficientBalanceException
 	{
-		System.out.println("Balance at entry:"+this.balance);
 		if(amt <= this.balance )
 		{
-			
-			Thread.sleep(2000);
-			
-			System.out.println("current balance before deducting "+amt+" rs:"+this.balance);
 			this.balance = this.balance - amt;
-			System.out.println("Current Balance after deducting "+amt+"rs is"+ this.balance);
+			System.out.println("Current Balance is"+ this.balance+" after withdrawing amt:"+amt);
 		}
 		else
 		{

@@ -1,4 +1,4 @@
-package multithreadingsynchro;
+package multithreading_account_overdrawn;
 
 public class RunnableEx implements Runnable{
 	
