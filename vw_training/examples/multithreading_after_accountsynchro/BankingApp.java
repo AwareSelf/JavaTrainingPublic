@@ -1,4 +1,4 @@
-package multithreadingsynchro;
+package multithreading_after_accountsynchro;
 
 public class BankingApp {
 

@@ -1,4 +1,4 @@
-package multithreadingsynchro;
+package multithreading_account_overdrawn;
 
 public class Account {
 
@@ -48,6 +48,8 @@ public class Account {
 	public double withdraw(double amt) throws InsufficientBalanceException,InterruptedException
 	{
 		System.out.println("Balance at entry:"+this.balance);
+		
+	
 		if(amt <= this.balance )
 		{
 			
@@ -63,7 +65,7 @@ public class Account {
 			
 			throw new InsufficientBalanceException(this.balance,amt,this.acctNo);
 		}
-		
+    
 		
 		return amt;
 	}
