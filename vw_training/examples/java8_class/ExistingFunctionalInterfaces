@@ -1,0 +1,13 @@
+
+abstract methods of Functional Interfaces in java.util.function package:-
+
+Consumer interface -> void accept(arg1);
+BiConsumer interface -> void accept(arg1,arg2)
+
+Function interface -> value apply(arg1);
+BiFunction interface ->  vale apply(arg1,arg2);
+
+
+Predicate interface -> boolean test(arg1);
+
+Supplier interface -> value get();
