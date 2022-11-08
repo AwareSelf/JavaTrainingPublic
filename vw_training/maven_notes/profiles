@@ -1,0 +1,68 @@
+https://www.tutorialspoint.com/maven/maven_build_profiles.htm
+
+Types of Build Profile
+Build profiles are majorly of three types.
+
+Type			Where it is defined
+Per Project		Defined in the project POM file, pom.xml
+Per User		Defined in Maven settings xml file (%USER_HOME%/.m2/settings.xml)
+Global			Defined in Maven global settings xml file (%M2_HOME%/conf/settings.xml)
+
+giving profiles in pom.xml:-
+<project xmlns = "http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0
+   http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.companyname.projectgroup</groupId>
+   <artifactId>project</artifactId>
+   <version>1.0</version>
+   <profiles>
+      <profile>
+         <id>test</id>
+         <build>
+            <plugins>
+               <plugin>
+...
+----x------x------------------------------
+mvn -Pactiveprofilename
+eclipse - run as - maven build - mention active profile there 
+java-project->right-click->properties->maven->active profile textbox
+
+settings.xml:-
+
+<settings>
+  [...]
+  <profiles>
+    <profile>
+      <id>inject-application-home</id>
+      <properties>
+        <application-home>/path/to/application</application-home>
+      </properties>
+    </profile>
+  </profiles>
+ 
+  <activeProfiles>
+    <activeProfile>inject-application-home</activeProfile>
+  </activeProfiles>
+  
+  
+ Example: Injecting POM Properties via Settings.xml
+Impetus
+You have a plugin parameter that should contain a user-specific value. This parameter has a common format (relative directory structure), but depends on knowing the directory of the installed application or something.
+
+Plugin Configuration
+<project>
+  [...]
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.myproject.plugins</groupId>
+        <artifactId>my-cool-maven-plugin</artifactId>
+        <version>1.0</version>
+        <configuration>
+          <deploymentDirectory>${application-home}/deploy</deploymentDirectory>
+        </configuration>
+      </plugin>
+    </plugins> 
+</settings>

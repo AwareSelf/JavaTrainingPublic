@@ -1,0 +1,15 @@
+https://mkyong.com/maven/where-is-maven-central-repository/
+By default, Maven will get project dependencies from Maven Local Repository, if it is not found, Maven will get it from the Maven Central Repository
+
+Maven Central Repository URL – https://repo1.maven.org/maven2/ 
+                  mirror -     https://repo.maven.apache.org/maven2
+Maven Central Repository Search – https://search.maven.org/
+
+pom.xml
+
+  <repositories>
+        <repository>
+            <id>java-net-repo</id>
+            <url>https://maven.java.net/content/repositories/public/</url>
+        </repository>     
+  </repositories>

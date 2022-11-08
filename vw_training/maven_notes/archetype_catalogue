@@ -1,0 +1,16 @@
+Location of catalog files
+The Archetype Plugin knows by default about its internal catalog. It also knows about the local and remote catalogs.
+
+local represents the ~/.m2/archetype-catalog.xml catalog file.
+
+remote represents the https://repo.maven.apache.org/maven2/archetype-catalog.xml catalog file.
+
+How does the Archetype Plugin know about archetypes?
+Knowledge about archetypes is stored in catalogs.
+
+The catalogs are xml files: see the reference documentation.
+
+The Archetype Plugin comes bundled with an internal catalog. This one is used by default.
+
+The Archetype Plugin can use catalogs from local filesystem and from HTTP connections.
+https://maven.apache.org/archetype/maven-archetype-plugin/specification/archetype-catalog.html

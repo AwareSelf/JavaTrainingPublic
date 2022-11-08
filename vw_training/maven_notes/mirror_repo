@@ -1,0 +1,8 @@
+Does anyone know if a list of known (and working) 
+Maven Central Repository (https://repo1.maven.org/maven2/) mirrors?
+
+If not, what mirrors do you use when the central repository is down?
+The official Maven 2 repository is at:
+
+https://repo.maven.apache.org/maven2/ hosted in the US, or
+http://uk.maven.org/maven2 hosted in the UK.

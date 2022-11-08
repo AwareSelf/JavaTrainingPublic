@@ -1,0 +1,44 @@
+By default, Maven will always look in the official Maven repository, which is http://repo1.maven.org.
+
+When Maven tries to build a project, it will look in your local repository (by default ~/.m2/repository but you 
+can configure it by changing the <localRepository> value in your ~/.m2/settings.xml) to find any dependency, 
+plugin or report defined in your pom.xml. If the adequate artifact is not found in your local repository, 
+it will look in all external repositories configured, starting with the default one, http://repo1.maven.org.
+
+You can configure Maven to avoid this default repository by setting a mirror in your settings.xml file:
+
+<mirrors>
+    <mirror>
+        <id>repoMirror</id>
+        <name>Our mirror for Maven repository</name>
+        <url>http://the/server/</url>
+        <mirrorOf>*</mirrorOf>
+    </mirror>
+</mirrors>
+This way, instead of contacting http://repo1.maven.org, Maven will contact your entreprise repository 
+(http://the/server in this example).
+
+If you want to add another repository, you can define a new one in your settings.xml file:
+
+<profiles>
+    <profile>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <repositories>
+            <repository>
+                <id>foo.bar</id>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+                <url>http://new/repository/server</url>
+            </repository>
+        </repositories>
+You can see the complete settings.xml model here.
+
+Concerning the clean process, you can ask Maven to run it offline. In this case, Maven will not try to reach any external repositories:
+
+mvn -o clean 

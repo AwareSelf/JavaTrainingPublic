@@ -1,0 +1,39 @@
+
+What Maven goals should I write?
+Maven Goals:-
+compiler:compile – the compile goal from the compiler plugin is bound to the compile phase.
+compiler:testCompile is bound to the test-compile phase.
+surefire:test is bound to the test phase.
+install:install is bound to the install phase.
+jar:jar and war:war is bound to the package phase.
+
+What are all the Maven goals?
+Maven Build Phases
+validate.
+compile.
+test.
+package.
+verify.
+install.
+deploy.
+
+Role of POM in Build Lifecycle
+The maven builds executed through the command line runs a set of phases and goals. 
+The pom.xml configuration plays a major role in setting up the project build lifecycle. 
+The packaging value of pom.xml file defines the set of goals to be executed by the maven build. 
+For example, if it’s jar then the following phases and goals will be executed.
+
+Phase						Goal
+process-resources			resources:resources
+compile						compiler:compile
+process-test-resources		resources:testResources
+test-compile				compiler:testCompile
+test						surefire:test
+package						jar:jar
+install						install:install
+deploy						deploy:deploy
+
+We can also configure goals in the pom.xml file using the plugins element. 
+This is mostly required when you have created a custom plugin and want to execute any specific goal for a build phase.
+
+https://jenkov.com/tutorials/maven/maven-commands.html
