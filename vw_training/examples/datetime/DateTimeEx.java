@@ -15,6 +15,7 @@ public class DateTimeEx {
 		LocalTime t = LocalTime.now();
 		System.out.println(t);
 		
+		LocalDateTime dt = LocalDateTime.now();
 		System.out.println(dt);
 		
 		
