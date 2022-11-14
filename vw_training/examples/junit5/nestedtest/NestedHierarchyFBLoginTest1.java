@@ -7,7 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import org.junit.jupiter.api.Nested;
 
-public class NestedHierarchyFBLoginTest {
+/*
+ * Example With Separate Lifecycle Methods For Nested Class
+We will now demonstrate an example where both the main class and the nested 
+class have their lifecycle callback methods. Let’s understand the sequence of 
+the workflow when such a program is executed.
+ */
+public class NestedHierarchyFBLoginTest1 {
 	
 	@BeforeAll
 	static void setUp(){
@@ -27,19 +33,23 @@ public class NestedHierarchyFBLoginTest {
 
 	@Nested
 	class NestedPasswordClass { 
+		
+		
+		@BeforeEach
+		void beforeEachTest_nested(){
+			System.out.println("@BeforeEach- nestedPasswordClass");
+		}
 
 		@Test
 		void  verifyPassword(){
 			String passwd="mypasswd123";
 			assertEquals(passwd,"mypasswd123","Valid password");
-			System.out.println("NESTED CLASS - nestedPasswordClass-verifyPassword test1");
+			System.out.println("NESTED CLASS - nestedPasswordClass");
 		}
 		
-		@Test
-		void  verifyPassword1(){
-			String passwd="mypasswd123";
-			assertNotEquals(passwd,"mypasswd","Invalid password");
-			System.out.println("NESTED CLASS - nestedPasswordClass-verifyPasswordTest2");
+		@AfterEach
+		void afterEachTest_nested(){
+			System.out.println("@AfterEach- nestedPasswordClass");
 		}
 	}
 	
