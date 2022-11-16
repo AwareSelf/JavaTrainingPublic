@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [16/Nov/2022:17:58:53 +0530] "GET /HelloWorld HTTP/1.1" 302 - http-bio-9090-exec-2 0
+0:0:0:0:0:0:0:1 - - [16/Nov/2022:17:58:54 +0530] "GET /HelloWorld/ HTTP/1.1" 200 52 http-bio-9090-exec-3 473
+0:0:0:0:0:0:0:1 - - [16/Nov/2022:17:59:04 +0530] "GET /HelloWorld/helloworld1?myname=namrata HTTP/1.1" 200 43 http-bio-9090-exec-4 1
