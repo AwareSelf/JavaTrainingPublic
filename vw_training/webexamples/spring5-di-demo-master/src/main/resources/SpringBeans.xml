@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+
+
+ <context:property-placeholder location="application.properties" />
+
+   <context:component-scan base-package="autowiringanno">
+   </context:component-scan>
+   
+   <context:annotation-config />
+   
+	<bean id="helloBean" class="propertyinjection.HelloWorld">
+		<property name="name" value="Namrata" />
+		<property name="message" value="Hello All" />
+	</bean>
+	
+	
+	<bean id="birthDate" class="propertyrefinjection.BirthDate">
+		<property name="date" value="25" />
+		<property name="month" value="07" />
+		<property name="year" value="1979" />
+	</bean>
+
+	<bean id="employee" class="propertyrefinjection.Employee">
+ 			<property name="firstname" value="amit" />
+ 			<property name="lastname" value="deshpande" /> 
+			 <property name="birthdate" ref="birthDate" />	
+	</bean>
+	
+	
+	<bean id="greetingServicess" class="constructorinjection.GreetingServiceImpl">
+		<!--  property and constructor-arg both can be present 
+				first constructor will be invoked and then the 
+				setter method for corresponding property is invoked
+			
+		<property name="greeting">
+		         <value>Hello World</value>
+		</property>
+		-->
+		<constructor-arg>
+			<value>Buenos Dias!</value>
+		</constructor-arg>
+	</bean>
+	
+	
+	<bean id="birthDate1" class="constructorinjectionwithref.BirthDate">
+		<constructor-arg value="25" />
+		<constructor-arg value="07" />
+		<constructor-arg value="1979" />
+	</bean>
+
+	<bean id="employee1" class="constructorinjectionwithref.Employee1">
+ 		<constructor-arg value="amit" />
+ 		<constructor-arg value="deshpande" /> 
+		<constructor-arg ref="birthDate1" /> 
+	</bean>
+	
+	
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+	 
+	 
+	<bean id="helloBean1" class="propertyinjection.HelloWorld" scope="prototype">
+		<property name="name" value="Namrata" />
+		<property name="message" value="Hello All" />
+	</bean>
+	
+	<bean id="lifecyclebean" class="nama.springframework.LifecycleBean"
+	      init-method="init"
+	      destroy-method="destroy">
+		<property name="message" value="Namrata" />
+		
+	</bean>
+	
+	
+	
+	
+
+</beans>
