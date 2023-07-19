@@ -7,7 +7,7 @@ import java.io.*;
 
 public class CheckedExceptionEx2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 	
 		System.out.println("start of program main..");
 		
@@ -19,7 +19,7 @@ public class CheckedExceptionEx2 {
 		catch(IOException e)
 		{
 			e.printStackTrace();
-		}
+		} 
 		 System.out.println("end of program reached..");
 
 	}
